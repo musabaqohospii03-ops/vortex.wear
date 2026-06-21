@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORTEX WEAR | Premium Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f6f8b5f3f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <h1>VORTEX WEAR</h1>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">VORTEX WEAR</div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Luxury Streetwear Collection</h1>
+            <p>
+                Temukan koleksi fashion premium dengan desain modern,
+                elegan, dan nyaman untuk segala aktivitas.
+            </p>
+
+            <a href="#products" class="btn">
+                Belanja Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari produk..."
+        >
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+
+        <div class="section-title">
+            <h2>Koleksi Terbaru</h2>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800"
+                    alt="Kaos Premium">
+
+                <h3>Premium T-Shirt</h3>
+                <p class="price">Rp 199.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Premium T-Shirt"
+                    data-price="199000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800"
+                    alt="Hoodie">
+
+                <h3>Luxury Hoodie</h3>
+                <p class="price">Rp 349.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Luxury Hoodie"
+                    data-price="349000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800"
+                    alt="Jacket">
+
+                <h3>Urban Jacket</h3>
+                <p class="price">Rp 499.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Urban Jacket"
+                    data-price="499000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800"
+                    alt="Oversized">
+
+                <h3>Oversized Tee</h3>
+                <p class="price">Rp 229.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Oversized Tee"
+                    data-price="229000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800"
+                    alt="Sweater">
+
+                <h3>Premium Sweater</h3>
+                <p class="price">Rp 279.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Premium Sweater"
+                    data-price="279000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800"
+                    alt="Fashion">
+
+                <h3>Essential Wear</h3>
+                <p class="price">Rp 259.000</p>
+
+                <button
+                    class="add-to-cart"
+                    data-name="Essential Wear"
+                    data-price="259000">
+                    Tambah ke Keranjang
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CART -->
+    <div class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+            <h2>Keranjang</h2>
+            <button id="closeCart">✕</button>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+            <h3>Total:</h3>
+            <h2 id="cart-total">Rp 0</h2>
+
+            <button id="checkoutBtn">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- CHECKOUT -->
+    <section class="checkout" id="checkout">
+
+        <div class="section-title">
+            <h2>Checkout</h2>
+        </div>
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                placeholder="Nama Lengkap"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Nomor WhatsApp"
+                required
+            >
+
+            <textarea
+                placeholder="Alamat Lengkap"
+                required>
+            </textarea>
+
+            <button type="submit">
+                Konfirmasi Pesanan
+            </button>
+
+        </form>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <h2>Tentang Kami</h2>
+        </div>
+
+        <p>
+            VORTEX WEAR adalah brand fashion premium yang menghadirkan
+            perpaduan antara streetwear modern dan sentuhan luxury.
+            Setiap produk dirancang dengan kualitas terbaik untuk
+            memberikan kenyamanan dan gaya yang maksimal.
+        </p>
+
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonials" id="testimonials">
+
+        <div class="section-title">
+            <h2>Testimoni Pelanggan</h2>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+                <p>
+                    "Bahannya premium dan sangat nyaman dipakai."
+                </p>
+                <h4>- Rizky</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    "Pengiriman cepat dan kualitas sesuai ekspektasi."
+                </p>
+                <h4>- Andi</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    "Desainnya elegan dan cocok untuk outfit harian."
+                </p>
+                <h4>- Dimas</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact">
+
+        <h2>VORTEX WEAR</h2>
+
+        <p>
+            Premium Fashion Store
+        </p>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">WhatsApp</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 VORTEX WEAR. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
